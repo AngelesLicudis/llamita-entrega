@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital@1&family=Secular+One&family=Shadows+Into+Light&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* comienzo mobil first  de 320 - 500*/
+
+main{
+    background-color: rgb(238, 209, 219);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* sigo con mobil first  de 500 - 800*/
+@media (min-width: 500px){
+
+main{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    }
+    }
