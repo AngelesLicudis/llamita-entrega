@@ -184,13 +184,20 @@ body{
 }
 
 /* formulario para que envíen tips */
-.mb-3{
+.container{
     margin: 25px 25px;
-    border: 10px solid blanchedalmond;
+    border: 10px solid white;
     background-color: blanchedalmond;
 }
-
-
+label{
+    font-family:'Barlow', sans-serif;;
+    font-style: normal;
+    font-weight: normal;
+    text-align: justify;
+    @include space (1px, 2px, 20px, 25px);
+    margin: 20px 15px;
+    color: black;
+}
     .gastos{
         grid-area: gastos;
     }
