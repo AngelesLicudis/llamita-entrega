@@ -1,10 +1,12 @@
 @import "general";
-@import "nav";
 @import "footer";
+@import "nav";
+
 
 /* comienzo mobil first  de 320 - 500*/
 
-//** Determino Mixin**//
+//**  Mixin**//
+
 @mixin space ($letter-spacing, $word-spacing, $font-size, $line-height){
     letter-spacing: $letter-spacing;
     word-spacing: $word-spacing;
@@ -24,7 +26,8 @@ ol li{
 }
 
 p{
-    margin: 20px 10px;
+    width: 90%;
+    margin: 15px 15px;
 }
 .texto{ 
     font-family:'Barlow', sans-serif;;
@@ -32,12 +35,12 @@ p{
     font-weight: normal;
     text-align: justify;
     @include space (1px, 2px, 20px, 25px);
-    margin: 20px 15px;
+    margin: 20px 20px;
     color: black;
 }
 
 
-/*utilizo las propiedades de extend para los textos principales*/
+/*extend para los textos principales*/
 .palabra{
     font-family: 'Secular One', sans-serif;
     text-align: center;
@@ -56,7 +59,7 @@ h3{
     @include space(2px, 3px, 25px, 30px);      
 }
 
-.ciudad{
+.ciudad {
     @extend .palabra;
     @include space(2px, 3px, 25px, 30px);
     
@@ -120,29 +123,36 @@ body{
 
 .icono{
     padding: 15px;
+    width: 40px;
+    height: 40px;
 }
 
 .cuadro{
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 25px 25px;
     border: 10px solid white;
 }
 
 .gastos, .moneda, .hotel, .comida, .movilidad, .datos, .paseos, .medicos, .regalos{
     @extend .cuadro;
-        
 }
-
 
 .valija, .grupo, .estacion, .control, .bultos, .trasbordo{ 
     @extend .cuadro;
 }
+.destino, .spain, .grecia, .uk, .neederlands, .belgica, .alemania, .hangugo, .japon{
+    @extend .cuadro
+}
 
-/* íconos a moverse */
+
+/*iconos moverse */
+
 .icono:hover{
-    transform:translate(200px);
+    transform:translate(100px);
     transition-property: all;
     transition-duration: 6s;
     }
@@ -163,9 +173,18 @@ body{
 .paisaje{
     margin-top: 20px;
     height: 350px;
-    width: 250px;
+    width: 300px;
 }
+
 .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video{
+    width: 80%;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,6 +208,7 @@ body{
     border: 10px solid white;
     background-color: blanchedalmond;
 }
+
 label{
     font-family:'Barlow', sans-serif;;
     font-style: normal;
@@ -298,13 +318,24 @@ label{
 /* sigo con mobil first  de 800 - 1024*/
 @media (min-width: 800px){
 
-    .listado{
-        background-color: white;
-        margin: 10px;
-        display: grid;
-        gap: 10px;
-        grid-template-columns: 1fr 3fr;
+    p{
+    margin: 35px 35px;
     }
+
+    .paisaje{
+        margin-top: 20px;
+        height: 400px;
+        width: 500px;
+    }
+
+    .listado{
+    background-color: white;
+    margin: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 3fr;
+    }
+
 /* en la página ppal acomodo en un costado links recomendados */
 .grilla{
     display: grid;
@@ -349,6 +380,7 @@ label{
     align-items: stretch;
     
 }
+
 .texto{
     margin: 20px;
     

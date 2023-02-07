@@ -1,11 +1,12 @@
 
 footer{
-    background-color: rgb(212, 119, 197);
+    background-color: white;
     display: flex;
-    width: 100%;
+    width: 95%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-    
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 50px;
 }
